@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Run custom GitHub Action
       id: get-date-time
-      uses: Gayathri-Gadde/Generate-Date-and-Time@v1.1
+      uses: Gayathri-Gadde/Generate-Date-and-Time@v1.2
       with:
-        url: 'https://t-gg-fapp.azurewebsites.net/api/Returndateandtime?'
+        function-url: 'https://t-gg-fapp.azurewebsites.net/api/Returndateandtime?'
 
     - name: Output current date and time
-      run: echo "Current Date and Time from Azure Function: ${{ steps.get-date-time.outputs.currentDateTime }}"
+      run: echo "Current Date and Time from Azure Function ${{ steps.get-date-time.outputs.currentDateTime }}"
