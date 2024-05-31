@@ -18,9 +18,9 @@ jobs:
 
     - name: Run custom GitHub Action
       id: get-date-time
-      uses: Gayathri-Gadde/Generate-Date-and-Time@v1.4
+      uses: Gayathri-Gadde/Generate-Date-and-Time@v1.5
       with:
         function-url: 'https://t-gg-fapp.azurewebsites.net/api/Returndateandtime?'
 
     - name: Output current date and time
-      run: echo "Current Date and Time from Azure Function ${{ steps.get-date-time.outputs.body}}"
+      run: echo "Current Date and Time from Azure Function ${{ steps.get-date-time.outputs.currentDateTime}}"
