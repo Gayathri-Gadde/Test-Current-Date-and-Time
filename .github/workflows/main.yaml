@@ -23,4 +23,4 @@ jobs:
         url: 'https://t-gg-fapp.azurewebsites.net/api/Returndateandtime?'
 
     - name: Output current date and time
-      run: echo "Current Date and Time from Azure Function: ${{ steps.get-date-time.outputs.currentDateTime }}"
+      run: echo "Current Date and Time from Azure Function ${{ steps.get-date-time.outputs.currentDateTime }}"
