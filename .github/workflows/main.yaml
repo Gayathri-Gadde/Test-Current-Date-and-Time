@@ -20,7 +20,7 @@ jobs:
       id: get-date-time
       uses: Gayathri-Gadde/Generate-Date-and-Time@t1.16
       with:
-        function-url: 'https://t-gg-fapp.azurewebsites.net/api/Returndateandtime?'
+        function-url: 'https://new-fapp.azurewebsites.net/api/currentdatetime?'
 
     - name: Output current date and time
       run: echo "Current Date and Time from Azure Function ${{ steps.get-date-time.outputs.currentDateTime}}"
